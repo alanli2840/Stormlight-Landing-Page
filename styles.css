@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.header {
+    height: 4rem;
+    width: 100vw;
+    background: rgb(26, 41, 57);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    padding: 0 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.header img {
+    height: 2.5rem;
+}
+
+
+.main-nav__items {
+    padding: 0 1rem;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: rgb(254, 246, 223);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+
+
