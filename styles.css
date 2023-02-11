@@ -187,6 +187,16 @@ main {
     justify-content: center;
 }
 
+.quotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-container:first-of-type {
+    margin: 3rem;
+}
+
 .quote-container {
     width: 900px;
     display: flex;
@@ -197,16 +207,67 @@ main {
 .quote {
     margin: 1rem 0;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-style: italic;
     text-align: center;
 }
 
 .source {
+    width: 100%;
     color: white;
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+.find-out-more {
+    margin: 3rem 0;
+    padding: 2rem;
+    width: 85%; 
+    height: 14rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(7, 16, 45, 0.5 );
+    border-radius: 32px;
+}
+
+.find-out-more__info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: rgb(198, 226, 250);
+}
+
+.find-out-more__info h1 {
+    margin: 0;
     font-size: 2rem;
 }
 
+.find-out-more__info p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.find-out-more button {
+    margin: 2rem;
+    padding: 1rem;
+    width: 225px;
+    border: 5px solid rgb(7, 16, 45);
+    border-radius: 60px;
+    background-color: rgb(26, 41, 57);
+    color: rgb(254, 246, 223);
+    font-size: 1.2rem;
+    font-weight: bold;  
+}
+
+.find-out-more button:hover,
+.find-out-more button:active {
+    background-color: rgb(72, 110, 152);
+    color: rgb(253, 252, 249);
+    cursor: pointer;
+}
 
 .footer {
     height: var(--footer-height);
