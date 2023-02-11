@@ -65,7 +65,7 @@ main {
   width: 100%;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 #intro {
@@ -82,6 +82,8 @@ main {
     border-radius: 32px;
     padding: 3rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .intro-text {
@@ -105,7 +107,7 @@ main {
 }
 
 .intro-box .logo {
-    padding: 4rem;
+    padding: 2rem;
     display: flex;
     align-items: center;
 }
@@ -117,9 +119,18 @@ main {
     object-fit: cover;
 }
 
+#story-intro > div {
+    background: rgb(26, 41, 57);
+    height: 20rem;
+}
+
+#extra-info {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    background: url(media/images/extra-info-bg.webp) top/cover no-repeat border-box, black;
+}
+
 .footer {
     height: var(--footer-height);
-    width: 100%;
     padding: .5rem;
     background: rgb(26, 41, 57);
     display: flex;
