@@ -48,11 +48,34 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: calc(var(--header-height) * .35);
     font-weight: 800;
+    padding-bottom: 1.5px;
+    position: relative;
+}
+
+.main-nav__item a:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(84, 174, 253) 35%, rgb(135, 197, 251)45%, rgb(198, 226, 250));
+    transform-origin: right bottom;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
 }
 
 .main-nav__item:hover a,
 .main-nav__item:active a {
     color: rgb(84, 174, 253);
+    transition: color 150ms linear;
+}
+
+.main-nav__item a:hover:after,
+.main-nav__item a:active:After {
+    transform: scaleX(1);
+    transform-origin: left bottom;
+    transition: transform 200ms ease-in-out;
 }
 
 main {
