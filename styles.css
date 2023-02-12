@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1;ital,wght@0,800;1,600;1,800&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -41,14 +44,15 @@ body {
 
 .main-nav__item a {
     text-decoration: none;
-    color: rgb(254, 246, 223);
+    color: rgb(198, 226, 250);
+    font-family: "Open Sans", sans-serif;
     font-size: calc(var(--header-height) * .35);
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .main-nav__item:hover a,
 .main-nav__item:active a {
-    color: rgb(227, 203, 159);
+    color: rgb(80, 106, 141);
 }
 
 main {
@@ -91,14 +95,18 @@ main {
     padding: 2rem;
     color: rgb(198, 226, 250);
     display: flex;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .intro-text h1{
+    color: rgb(84, 174, 253);
+    font-family: 'Alegreya', serif;
     text-align: center;
-    font-weight: bold;
+    font-weight: 800;
     font-size: 2.25rem;
 }
 
@@ -132,8 +140,8 @@ main {
 #story-intro > h1 {
     padding-bottom: 32px;
     margin: 0;
-    color: rgb(227, 203, 159);
-    font-weight: bold;
+    color: rgb(84, 174, 253);
+    font-family: 'Open Sans', sans-serif;
     font-size: 3.5rem;
 }
 
@@ -150,16 +158,16 @@ main {
 }
 
 .cover-container {
-    border: 5px solid rgb(254, 246, 223);
+    border: 5px solid rgb(198, 226, 250);
     border-bottom: 0;
     border-radius: 5px;
-    background-color: rgb(254, 246, 223);
+    background-color: rgb(198, 226, 250);
 }
 
 .cover-container:hover {
-    border: 5px solid rgb(227, 203, 159);
+    border: 5px solid rgb(84, 174, 253);
     border-bottom: 0;
-    background-color: rgb(227, 203, 159);
+    background-color: rgb(84, 174, 253);
 }
 
 .book-container img {
@@ -171,10 +179,11 @@ main {
 }
 
 .book-info h2 {
-    width: 225px;
-    color: rgb(227, 203, 159);
-    font-weight: bold;
-    font-size: 1.35rem;
+    width: 175px;
+    color: rgb(198, 226, 250);
+    font-family: 'Alegreya', serif;
+    font-weight: 600;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -208,13 +217,17 @@ main {
     margin: 1rem 0;
     color: white;
     font-size: 1.75rem;
+    font-family: 'Alegreya', serif;
     font-style: italic;
+    font-weight: 600;
     text-align: center;
 }
 
 .source {
     width: 100%;
     color: white;
+    font-family: 'Alegreya', serif;
+    font-weight: 600;
     font-size: 1.5rem;
     text-align: end;
 }
@@ -242,11 +255,15 @@ main {
 
 .find-out-more__info h1 {
     margin: 0;
+    color: rgb(84, 174, 253);
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
 }
 
 .find-out-more__info p {
     margin: 0;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
     font-size: 1.1rem;
 }
 
@@ -254,18 +271,19 @@ main {
     margin: 2rem;
     padding: 1rem;
     width: 225px;
-    border: 5px solid rgb(7, 16, 45);
+    border: 5px solid rgb(0, 94, 176);
     border-radius: 60px;
-    background-color: rgb(26, 41, 57);
-    color: rgb(254, 246, 223);
+    background-color: rgb(72, 170, 255);
+    color: rgb(193, 225, 253);
+    font-family: 'Open Sans', 'sans-serif';
     font-size: 1.2rem;
     font-weight: bold;  
 }
 
 .find-out-more button:hover,
 .find-out-more button:active {
-    background-color: rgb(72, 110, 152);
-    color: rgb(253, 252, 249);
+    background-color: rgb(193, 225, 253);
+    color: rgb(72, 170, 255);
     cursor: pointer;
 }
 
@@ -287,7 +305,7 @@ main {
 .footer p {
     margin: 0;
     color: #808080;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
     font-size: calc(var(--footer-height) * .15);
 }
-
-
