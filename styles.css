@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1;ital,wght@0,800;1,600;1,800&display=swap');
 
 * {
@@ -47,12 +47,12 @@ body {
     color: rgb(198, 226, 250);
     font-family: "Open Sans", sans-serif;
     font-size: calc(var(--header-height) * .35);
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 .main-nav__item:hover a,
 .main-nav__item:active a {
-    color: rgb(80, 106, 141);
+    color: rgb(84, 174, 253);
 }
 
 main {
@@ -108,6 +108,7 @@ main {
     text-align: center;
     font-weight: 800;
     font-size: 2.25rem;
+    text-shadow: 0 0 1.2rem rgb(123, 193, 255);
 }
 
 .intro-text {
@@ -115,9 +116,11 @@ main {
 }
 
 .intro-box .logo {
-    padding: 2rem;
+    margin: 2rem;
     display: flex;
     align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 48px 2px rgb(123, 193, 255);
 }
 
 .intro-box img {
@@ -141,7 +144,9 @@ main {
     padding-bottom: 32px;
     margin: 0;
     color: rgb(84, 174, 253);
-    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 0 1.2rem rgb(123, 193, 255);
+    font-family: 'Alegreya', serif;
+    font-style: italic;
     font-size: 3.5rem;
 }
 
@@ -158,20 +163,18 @@ main {
 }
 
 .cover-container {
-    border: 5px solid rgb(198, 226, 250);
-    border-bottom: 0;
-    border-radius: 5px;
-    background-color: rgb(198, 226, 250);
+    border-radius: 24px;
+    box-shadow: 0 0 8px 1px rgb(84, 174, 253);
 }
 
 .cover-container:hover {
-    border: 5px solid rgb(84, 174, 253);
-    border-bottom: 0;
-    background-color: rgb(84, 174, 253);
+    box-shadow: 0 0 24px 3px rgb(123, 193, 255);
 }
 
 .book-container img {
     width: 225px;
+    border-radius: 24px;
+    margin-bottom: -3.5px;
 }
 
 .book-container:last-of-type img {
@@ -180,7 +183,7 @@ main {
 
 .book-info h2 {
     width: 175px;
-    color: rgb(198, 226, 250);
+    color: rgb(84, 174, 253);
     font-family: 'Alegreya', serif;
     font-weight: 600;
     font-size: 1rem;
@@ -221,6 +224,7 @@ main {
     font-style: italic;
     font-weight: 600;
     text-align: center;
+    text-shadow: 0.15rem 0.15rem 0.3rem rgb(0 0 0);
 }
 
 .source {
@@ -257,14 +261,16 @@ main {
     margin: 0;
     color: rgb(84, 174, 253);
     font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
     font-size: 2rem;
+    text-shadow: 0 0 1.2rem rgb(123, 193, 255);
 }
 
 .find-out-more__info p {
     margin: 0;
-    font-family: 'Alegreya', serif;
+    font-family: 'Open Sans', 'sans-serif';
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .find-out-more button {
@@ -277,7 +283,7 @@ main {
     color: rgb(193, 225, 253);
     font-family: 'Open Sans', 'sans-serif';
     font-size: 1.2rem;
-    font-weight: bold;  
+    font-weight: 800;
 }
 
 .find-out-more button:hover,
