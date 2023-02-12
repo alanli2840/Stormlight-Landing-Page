@@ -59,7 +59,7 @@ body {
     left: 0;
     height: 3px;
     width: 100%;
-    background: linear-gradient(to right, rgb(84, 174, 253) 35%, rgb(135, 197, 251)45%, rgb(198, 226, 250));
+    background: linear-gradient(to right, rgb(84, 174, 253) 35%, rgb(135, 197, 251)55%, rgb(198, 226, 250));
     transform-origin: right bottom;
     transform: scaleX(0);
     transition: transform 200ms ease-in-out;
@@ -302,10 +302,11 @@ main {
     margin: 2rem;
     padding: 1rem;
     width: 225px;
-    border: 5px solid rgb(0, 94, 176);
+    border: 5px solid rgb(198, 226, 250);
     border-radius: 60px;
-    background-color: rgb(72, 170, 255);
-    color: rgb(193, 225, 253);
+    box-shadow: 0 0 5px 2px rgb(123, 193, 255);
+    background: linear-gradient(to top, rgb(83, 175, 255) 15%, rgb(1, 135, 253) 50%, rgb(59, 160, 249));
+    color: rgb(198, 226, 250);
     font-family: 'Open Sans', 'sans-serif';
     font-size: 1.2rem;
     font-weight: 800;
@@ -313,8 +314,10 @@ main {
 
 .find-out-more button:hover,
 .find-out-more button:active {
-    background-color: rgb(193, 225, 253);
-    color: rgb(72, 170, 255);
+    background: linear-gradient(to bottom, rgb(83, 175, 255) 15%, rgb(1, 135, 253) 50%, rgb(59, 160, 249));
+    box-shadow: 0 0 10px 4px rgb(123, 193, 255);
+    transform: translateY(-3px);
+    transition: all 200ms ease-out;
     cursor: pointer;
 }
 
