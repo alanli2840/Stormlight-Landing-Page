@@ -164,11 +164,13 @@ main {
 
 .cover-container {
     border-radius: 24px;
-    box-shadow: 0 0 8px 1px rgb(84, 174, 253);
+    box-shadow: 0 0 16px 4px rgb(84, 174, 253);
 }
 
 .cover-container:hover {
-    box-shadow: 0 0 24px 3px rgb(123, 193, 255);
+    box-shadow: 0 0 32px 8px rgb(123, 193, 255);
+    transform: scale(1.05);
+    transition: box-shadow 300ms ease-out, transform 150ms ease-out;
 }
 
 .book-container img {
@@ -224,7 +226,7 @@ main {
     font-style: italic;
     font-weight: 600;
     text-align: center;
-    text-shadow: 0.15rem 0.15rem 0.3rem rgb(0 0 0);
+    text-shadow: 0.15rem 0.15rem 0.25rem rgb(0 0 0);
 }
 
 .source {
