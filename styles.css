@@ -101,12 +101,7 @@ main {
     width: 100%;
     height: calc(100vh - var(--header-height));
     z-index: -1;
-    opacity: 0;
     object-fit: cover;
-}
-
-.background-video:first-of-type {
-    opacity: 1;
 }
 
 #intro {
@@ -136,6 +131,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 400ms ease-out;
 }
 
 .intro-text {
@@ -367,4 +363,12 @@ main {
     font-family: 'Alegreya', serif;
     font-weight: 400;
     font-size: calc(var(--footer-height) * .15);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.opacity-zero {
+    opacity: 0;
 }
