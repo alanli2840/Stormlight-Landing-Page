@@ -1,19 +1,19 @@
 const bgProgBar = document.querySelector(".bg-progress-bar");
 const bgVids = document.querySelectorAll(".background-video");
 
-const zIndices = [-1, -2, -2, -2];
+const opacitys = [1, 0, 0, 0];
 let bgIndex = 1;
 let progCount = 0.0;
 
 console.log(bgVids);
 const updateBg = () => {
     if(bgIndex === 0) {
-        zIndices[0]++;
-        zIndices[3]--;
+        opacitys[0]++;
+        opacitys[3]--;
     }
     else {
-        zIndices[bgIndex - 1]--;
-        zIndices[bgIndex]++;
+        opacitys[bgIndex - 1]--;
+        opacitys[bgIndex]++;
     }
     if(bgIndex === 3) {
         bgIndex = 0;
@@ -22,7 +22,7 @@ const updateBg = () => {
         bgIndex++;
     }
     for(let i = 0; i < bgVids.length; i++) {
-        bgVids[i].style.zIndex = zIndices[i];
+        bgVids[i].style.opacity = opacitys[i];
     }
 }
 
