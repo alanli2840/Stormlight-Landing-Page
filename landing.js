@@ -9,13 +9,13 @@ console.log(bgVids);
 const updateBg = () => {
     if(bgIndex === 0) {
         opacitys[0]++;
-        opacitys[3]--;
+        opacitys[opacitys.length - 1]--;
     }
     else {
         opacitys[bgIndex - 1]--;
         opacitys[bgIndex]++;
     }
-    if(bgIndex === 3) {
+    if(bgIndex === opacitys.length - 1) {
         bgIndex = 0;
     }
     else {
