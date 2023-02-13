@@ -19,7 +19,7 @@ const updateBg = () => {
     else {
         bgIndex++;
     }
-    bgVids[curIndex].classList.toggle('dim opacity-zero');
+    bgVids[curIndex].classList.toggle('dim');
     bgVids[curIndex].classList.toggle('opacity-zero');
     bgVids[prevIndex].classList.toggle('dim');
     bgVids[prevIndex].classList.toggle('opacity-zero');
@@ -32,7 +32,7 @@ const moveProg = () => {
     }
     progCount += .1;
     bgProgBar.style.transform =`scaleX(${progCount}%)`;
-    setTimeout(moveProg, 1);
+    setTimeout(moveProg, 8);
 };
 
 document.addEventListener('DOMContentLoaded', moveProg);
