@@ -5,15 +5,12 @@ const opacitys = [1, 0, 0, 0];
 let bgIndex = 1;
 let progCount = 0.0;
 
-console.log(bgVids);
 const updateBg = () => {
+    let prevIndex = bgIndex - 1;
+    let curIndex = bgIndex;
     if(bgIndex === 0) {
-        opacitys[0]++;
-        opacitys[opacitys.length - 1]--;
-    }
-    else {
-        opacitys[bgIndex - 1]--;
-        opacitys[bgIndex]++;
+        prevIndex = opacitys.length - 1;
+        curIndex = 0;
     }
     if(bgIndex === opacitys.length - 1) {
         bgIndex = 0;
@@ -21,9 +18,8 @@ const updateBg = () => {
     else {
         bgIndex++;
     }
-    for(let i = 0; i < bgVids.length; i++) {
-        bgVids[i].style.opacity = opacitys[i];
-    }
+    bgVids[curIndex].style.opacity = ++opacitys[curIndex]; 
+    bgVids[prevIndex].style.opacity = --opacitys[prevIndex];
 }
 
 const moveProg = () => {
@@ -33,7 +29,7 @@ const moveProg = () => {
     }
     progCount += .1;
     bgProgBar.style.transform =`scaleX(${progCount}%)`;
-    setTimeout(moveProg, 8);
+    setTimeout(moveProg, 1);
 }
 
 document.addEventListener('DOMContentLoaded', moveProg);
