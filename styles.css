@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1;ital,wght@0,800;1,600;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -102,7 +102,7 @@ main {
     height: calc(100vh - var(--header-height));
     z-index: -1;
     object-fit: cover;
-    transition: all 500ms ease-out;
+    transition: all 700ms ease-out;
 }
 
 #intro {
@@ -113,11 +113,35 @@ main {
     position: relative;
 }
 
-.bg-progress-bar {
+.bg-vid-controls {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-selector {
+    height: 10px;
+    width: 10px;
+    margin: 16px 32px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.bg-selector:hover,
+.selected {
+    cursor: pointer;
+    background-color: rgb(32, 149, 252);
+    box-shadow: 0 0 12px 6px white;
+}
+
+.bg-progress-bar {
     height: 5px;
     background: linear-gradient(to right, rgb(32, 149, 252) 35%, rgb(76, 171, 255)55%, rgb(117, 189, 252));
     transform-origin: left;
@@ -133,7 +157,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 400ms ease-out;
+    transition: opacity 800ms ease-out;
 }
 
 .intro-text {

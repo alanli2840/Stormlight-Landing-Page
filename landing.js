@@ -1,38 +1,50 @@
 const bgProgBar = document.querySelector(".bg-progress-bar");
+const bgSelectors = document.querySelectorAll(".bg-selector");
 const bgVids = document.querySelectorAll(".background-video");
 const introBox = document.querySelector(".intro-box");
-const introSection = document.querySelector("intro");
 
-let bgIndex = 1;
+let bgCurIndex = 0;
 let progCount = 0.0;
 
-const updateBg = () => {
-    let prevIndex = bgIndex - 1;
-    let curIndex = bgIndex;
-    if(bgIndex === 0) {
-        prevIndex = bgVids.length - 1;
-        curIndex = 0;
-    }
-    if(bgIndex === bgVids.length - 1) {
-        bgIndex = 0;
+const updateBg = bgNextIndex => {
+    bgVids[bgCurIndex].classList.toggle('dim');
+    bgVids[bgCurIndex].classList.toggle('opacity-zero');
+    bgVids[bgNextIndex].classList.toggle('dim');
+    bgVids[bgNextIndex].classList.toggle('opacity-zero');
+    bgSelectors[bgCurIndex].classList.toggle('selected');
+    bgSelectors[bgNextIndex].classList.toggle('selected');
+    bgCurIndex = bgNextIndex;
+};
+
+const rotateBg = () => {
+    let bgNextIndex;
+    if(bgCurIndex === bgVids.length - 1) {
+        bgNextIndex = 0;
     }
     else {
-        bgIndex++;
+        bgNextIndex = bgCurIndex + 1;
     }
-    bgVids[curIndex].classList.toggle('dim');
-    bgVids[curIndex].classList.toggle('opacity-zero');
-    bgVids[prevIndex].classList.toggle('dim');
-    bgVids[prevIndex].classList.toggle('opacity-zero');
+    updateBg(bgNextIndex);
 };
+
+const selectBg = bgNextIndex => {
+    progCount = 0.0;
+    bgProgBar.style.transform =`scaleX(${progCount}%)`;
+    updateBg(bgNextIndex);
+}
+
+for(let i = 0; i < bgSelectors.length; i++) {
+    bgSelectors[i].addEventListener('click', selectBg.bind(this, i));
+}
 
 const moveProg = () => {
     if(progCount > 100.0) {
-        updateBg();
+        rotateBg();
         progCount = 0.0;
     }
     progCount += .1;
     bgProgBar.style.transform =`scaleX(${progCount}%)`;
-    setTimeout(moveProg, 8);
+    setTimeout(moveProg, .1);
 };
 
 document.addEventListener('DOMContentLoaded', moveProg);
@@ -42,4 +54,3 @@ const toggleIntroBox = () => {
 };
 
 introBox.addEventListener('click', toggleIntroBox);
-introSection.addEventListener('click', toggleIntroBox);
