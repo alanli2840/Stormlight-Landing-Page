@@ -50,10 +50,9 @@ const moveProg = () => {
     }
     progCount += .1;
     bgProgBar.style.transform =`scaleX(${progCount}%)`;
-    setTimeout(moveProg, .1);
 };
 
-document.addEventListener('DOMContentLoaded', moveProg);
+document.addEventListener('DOMContentLoaded', setInterval(moveProg, 20));
 
 const toggleIntroBox = () => {
     introBox.classList.toggle('opacity-zero');
