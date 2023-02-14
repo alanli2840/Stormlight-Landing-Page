@@ -4,6 +4,10 @@ const bgVids = document.querySelectorAll(".background-video");
 const introBox = document.querySelector(".intro-box");
 const mobileNavButton = document.querySelector(".mobile-nav-button");
 const mobileNav = document.querySelector(".mobile-nav");
+const rosharBtn = document.querySelector(".find-out-more button");
+const videoPlayer = document.querySelector(".video-player");
+const closeVideo = document.querySelector(".close-button");
+
 
 let bgCurIndex = 0;
 let progCount = 0.0;
@@ -63,3 +67,11 @@ const toggleMobileNav = () => {
 };
 
 mobileNavButton.addEventListener('click', toggleMobileNav);
+
+const toggleVideoPlayer = () => {
+    videoPlayer.classList.toggle('show-video');
+}
+
+rosharBtn.addEventListener('click', toggleVideoPlayer);
+
+closeVideo.addEventListener('click', toggleVideoPlayer);

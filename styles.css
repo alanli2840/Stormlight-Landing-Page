@@ -15,6 +15,70 @@ body {
     --footer-height: 6rem;
 }
 
+.video-player {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-player-wrapper {
+    width: 80vw;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.video-player iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.close-button {
+    position: absolute;
+    top: -3px;
+    right: -30px;
+    width: 25px;
+    height: 25px;
+}
+
+.close-button-bar {
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 8px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transition: transform 200ms linear;   
+}
+
+.close-button-bar:first-of-type {
+    background: white;
+    transform: rotate(-45deg);
+}
+
+.close-button-bar:last-of-type {
+    background: white;
+    transform: rotate(45deg);
+}
+
+.close-button:hover {
+    cursor: pointer;
+}
+
+.close-button:hover .close-button-bar:first-of-type{
+    transform: rotate(90deg);
+}
+
+.close-button:hover .close-button-bar:last-of-type{
+    transform: rotate(-180deg);
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -60,7 +124,7 @@ body {
 }
 
 .mobile-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 14px;
     z-index: 1;
@@ -365,8 +429,10 @@ main {
     font-size: calc(var(--footer-height) * .15);
 }
 
-.hidden {
-    visibility: hidden;
+
+
+.show-video {
+    display: flex;
 }
 
 .opacity-zero {
@@ -498,6 +564,7 @@ main {
     
     .find-out-more__info {
         padding: 1.5rem;
+        width: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -511,15 +578,20 @@ main {
         color: rgb(84, 174, 253);
         font-family: 'Open Sans', sans-serif;
         font-weight: 800;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         text-shadow: 0 0 1.2rem rgb(123, 193, 255);
+        text-align: center;
     }
     
     .find-out-more__info p {
         margin: 0;
         font-family: 'Open Sans', 'sans-serif';
         font-weight: 400;
-        font-size: .75rem;
+        font-size: .65rem;
+    }
+
+    .find-out-more button {
+        width: 300px;
     }
 }
 
@@ -677,6 +749,7 @@ main {
     
     .find-out-more__info {
         padding: 1.5rem;
+        width: 900px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -699,6 +772,10 @@ main {
         font-family: 'Open Sans', 'sans-serif';
         font-weight: 400;
         font-size: .85rem;
+    }
+
+    .find-out-more button {
+        width: 300px;
     }
     
     .find-out-more button:hover,
