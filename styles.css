@@ -30,6 +30,7 @@ body {
 
 .video-player-wrapper {
     width: 80vw;
+    max-width: 1800px;
     position: relative;
     aspect-ratio: 16/9;
 }
