@@ -178,7 +178,7 @@ main {
     z-index: -1;
     object-fit: cover;
     object-position: right;
-    transition: all 700ms ease-out;
+    transition: opacity 700ms ease-out, filter 700ms ease-out;
 }
 
 #intro {

@@ -70,7 +70,8 @@ mobileNavButton.addEventListener('click', toggleMobileNav);
 
 const toggleVideoPlayer = () => {
     videoPlayer.classList.toggle('show-video');
-}
+    document.querySelector('.video-player iframe').src = document.querySelector('.video-player iframe').src + Math.floor(Math.random() * 10);
+};
 
 rosharBtn.addEventListener('click', toggleVideoPlayer);
 
