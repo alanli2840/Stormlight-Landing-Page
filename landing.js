@@ -2,6 +2,8 @@ const bgProgBar = document.querySelector(".bg-progress-bar");
 const bgSelectors = document.querySelectorAll(".bg-selector");
 const bgVids = document.querySelectorAll(".background-video");
 const introBox = document.querySelector(".intro-box");
+const mobileNavButton = document.querySelector(".mobile-nav-button");
+const mobileNav = document.querySelector(".mobile-nav");
 
 let bgCurIndex = 0;
 let progCount = 0.0;
@@ -54,3 +56,10 @@ const toggleIntroBox = () => {
 };
 
 introBox.addEventListener('click', toggleIntroBox);
+
+const toggleMobileNav = () => {
+    mobileNavButton.classList.toggle('mobile-nav-activated');
+    mobileNav.classList.toggle('mobile-nav-opened');
+};
+
+mobileNavButton.addEventListener('click', toggleMobileNav);
