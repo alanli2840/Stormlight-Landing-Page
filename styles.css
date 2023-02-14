@@ -17,7 +17,8 @@ body {
 
 .video-player {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    max-width:100%;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -84,7 +85,8 @@ body {
     top: 0;
     z-index: 2;
     height: var(--header-height);
-    width: 100%;
+    width: 100vw;
+    max-width:100%;
     background: rgb(26, 41, 57);
     display: flex;
     align-items: center;
@@ -163,7 +165,8 @@ body {
 }
 
 main {
-    width: 100;
+    width: 100vw;
+    max-width:100%;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     margin-top: var(--header-height);
 }
@@ -173,7 +176,8 @@ main {
     top: 0;
     left: 0;
     margin-top: var(--header-height);
-    width: 100%;
+    width: 100vw;
+    max-width:100%;
     height: calc(100vh - var(--header-height));
     z-index: -1;
 }
@@ -192,7 +196,8 @@ main {
 
 #intro {
     height: calc(100vh - var(--header-height));
-    width: 100%;
+    width: 100vw;
+    max-width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +208,8 @@ main {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    max-width:100%;
 }
 
 .controls {
@@ -286,6 +292,8 @@ main {
 
 #story-intro {
     padding: 32px;
+    width: 100vw;
+    max-width:100%;
     background: rgb(26, 41, 57);
     height: auto;
     display: flex;
@@ -420,6 +428,8 @@ main {
 
 .footer {
     height: var(--footer-height);
+    width: 100vw;
+    max-width:100%;
     padding: .5rem;
     background: rgb(26, 41, 57);
     display: flex;
@@ -637,7 +647,6 @@ main {
 
 @media(min-width: 1000px) {
     .header {
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
